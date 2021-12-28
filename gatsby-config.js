@@ -1,16 +1,16 @@
 module.exports = {
-  pathPrefix: "/blog",
+  pathPrefix: `home`,
   siteMetadata: {
-    title: `blog cesar`,
+    title: `Investing4every1`,
     author: {
       name: `Cesar Terrones`,
-      summary: `Lorem Ipsum`,
+      summary: `who wants to help anyone diving into finance by sharing the most useful information that he's been acquiring in more than 4 years of looking into investment-related topics`
     },
     description: `initial template`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://investing4everyone.com/`,
     social: {
-      twitter: `placeholder`,
-    },
+      email: `elmensito76@gmail.com`
+    }
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -18,15 +18,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        name: `blog`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -35,20 +35,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
-            },
+              maxWidth: 630
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
+          `gatsby-remark-smartypants`
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -82,9 +82,9 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                  custom_elements: [{ "content:encoded": node.html }]
+                });
+              });
             },
             query: `
               {
@@ -106,24 +106,24 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
-          },
-        ],
-      },
+            title: "Gatsby Starter Blog RSS Feed"
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
-        start_url: `/`,
+        start_url: `/home`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/icon.png` // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -135,15 +135,15 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
-            },
-          },
-        ],
-      },
+              maxWidth: 590
+            }
+          }
+        ]
+      }
     },
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
-}
+  ]
+};

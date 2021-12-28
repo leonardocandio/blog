@@ -19,7 +19,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            email
           }
         }
       }
@@ -36,7 +36,7 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/gatsby-icon.png"
+        src="../images/profile-pic.png"
         width={50}
         height={50}
         quality={95}
@@ -44,10 +44,10 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>
-              {social.twitter}
+          Made by <strong>{author.name}</strong> {author?.summary || null}
+          <br />
+          <a href={`mailto:${social.email}`}>
+            Contact by email
           </a>
         </p>
       )}

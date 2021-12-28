@@ -8,6 +8,8 @@
     "url": "https://github.com/leonardocandio/blog"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
+    "bootstrap": "^5.1.3",
     "gatsby": "^4.4.0",
     "gatsby-plugin-feed": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.4.0",
@@ -27,6 +29,7 @@
     "gatsby-transformer-sharp": "^4.4.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.0.4",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "typeface-merriweather": "0.0.72",
@@ -37,7 +40,11 @@
   },
   "homepage": "https://leonardocandio.github.io/blog",
   "keywords": [
-    "gatsby"
+    "investing",
+    "blog",
+    "gatsby",
+    "finance",
+    "personal"
   ],
   "license": "0BSD",
   "main": "n/a",
@@ -46,7 +53,7 @@
     "url": "https://github.com/leonardocandio/blog"
   },
   "scripts": {
-    "deploy" : "gatsby build --prefix-paths && gh-pages -d public -r https://github.com/leonardocandio/blog",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://github.com/leonardocandio/blog",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
